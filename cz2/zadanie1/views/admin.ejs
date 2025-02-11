@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>Wydział Informatyki</title>
+  <style>
+    /* Table Styling */
+    table {
+        width: 100%;
+        margin: 30px 0;
+        border-collapse: collapse;
+    }
+
+    table th, table td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    table th {
+        background-color: #007bff;
+        color: white;
+    }
+
+    table tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    table tr:hover {
+        background-color: #ddd;
+    }
+
+    /* Additional Styling for the page */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .btn-primary {
+        background-color: #28a745;
+        border-color: #28a745;
+    }
+
+    .btn-primary:hover {
+        background-color: #218838;
+        border-color: #1e7e34;
+    }
+</style>
+</head>
+<body>
+  <%- include('nav'); -%>
+  <div class="content">
+    <h1>Panel Administratora</h1>
+    <h2>Lista Użytkowników</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nazwa Użytkownika</th>
+          <th>Wydział</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% users.forEach(function(user) { %>
+          <tr>
+            <td><%= user._id %></td>
+            <td><%= user.username %></td>
+            <td><%= user.dept %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+  <a href="/logout">Wyloguj</a>
+
+</body>
+</html>
+

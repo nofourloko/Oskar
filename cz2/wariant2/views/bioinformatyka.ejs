@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>Wydział Informatyki</title>
+</head>
+<body>
+  <%- include('nav'); -%>
+  <div class="loginDiv">
+    <h1>Wydział BioInformatyki</h1>
+    <h2>Witaj <%= user.username %> </h2>
+    <p>Wydział Informatyki AGH oferuje nowoczesne kierunki studiów, badania naukowe oraz szeroką współpracę z przemysłem.</p>
+    <ul>
+      <li>Kierunki studiów: Informatyka, Inżynieria oprogramowania, Data Science</li>
+      <li>Lokalizacja: Budynek D17, ul. Kawiory 21</li>
+      <li>Dziekan: Prof. Jan Kowalski</li>
+      
+    </ul>
+    <a href="/logout">Wyloguj</a>
+  </div>
+
+</body>
+</html>

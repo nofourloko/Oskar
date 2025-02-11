@@ -1,0 +1,14 @@
+<nav class="navbar">
+    <a href="/">Strona główna</a>
+<% if (session) { %>
+    <a href="/logout">Wyloguj</a>
+<% } else { %>
+    <a href="/login">Logowanie</a>
+    <a href="/login/register">Rejestracja</a>
+<% } %>
+
+    <a href="/departaments/informatyka">Wydział Informatyki</a>
+    <a href="/departaments/bioinformatyka">Wydział BioInformatyki</a>
+    <a href="/departaments/elektronika">Wydział Elektroniki</a>
+    <a href="/departaments/admin">Administrator</a>
+  </nav>

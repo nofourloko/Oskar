@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>Register</title>
+</head>
+<body>
+  <%- include('nav'); -%>
+  <div class="auth">
+    <h1>Rejestracja</h1>
+    <% if (error) { %>
+      <p style="color: red;"><%= error %></p>
+    <% } %>
+    <form action="/login/register" method="post">
+      <label for="username">Nazwa użytkownika:</label>
+      <input type="text" id="username" name="username" required>
+      
+      <label for="password">Hasło:</label>
+      <input type="password" id="password" name="password" required>
+      
+      
+      <label for="dept">Wydział:</label>
+    <div class="custom-select">
+    <select id="dept" name="dept" required>
+        <option value="" disabled selected> Wybierz wydział </option>
+        <option value="informatyka">informatyka</option>
+        <option value="bioinformatyka">bioinformatyka</option>
+        <option value="elektronika">elektronika</option>
+    </select>
+    </div>
+      
+      <button type="submit">Zarejestruj się</button>
+    </form>
+  </div>
+</body>
+</html>
